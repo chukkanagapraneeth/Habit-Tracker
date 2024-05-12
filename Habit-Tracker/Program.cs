@@ -6,14 +6,12 @@ using System.Runtime.InteropServices;
 internal class Program
 {
     static string connectionString = @"Data Source=D:\CSharpProjs\Habit-TrackerVS2022\Habit-Tracker\Habit-Tracker\Database\Habit-Tracker.db";
-
     public class DrinkingWater
     {
         public int id { get; set; }
         public DateTime? Date { get; set; }
         public int quantity { get; set; }
     }
-
     private static void Main(string[] args)
     {
         using (var connection = new SqliteConnection(connectionString))
@@ -203,8 +201,6 @@ internal class Program
             }
             return dateInput;
         }
-
-        
 
         GetUserInput();
     }
